@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D79D9D1975C19D00E820F1 /* Die-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D901975C19D00E820F1 /* Die-1.png */; };
+		63D79D9E1975C19D00E820F1 /* Die-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D911975C19D00E820F1 /* Die-2.png */; };
+		63D79D9F1975C19D00E820F1 /* Die-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D921975C19D00E820F1 /* Die-3.png */; };
+		63D79DA01975C19D00E820F1 /* Die-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D931975C19D00E820F1 /* Die-4.png */; };
+		63D79DA11975C19D00E820F1 /* Die-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D941975C19D00E820F1 /* Die-5.png */; };
+		63D79DA21975C19D00E820F1 /* Die-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D951975C19D00E820F1 /* Die-6.png */; };
+		63D79DA31975C19D00E820F1 /* Goofy.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D961975C19D00E820F1 /* Goofy.png */; };
+		63D79DA41975C19D00E820F1 /* HarryGQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D971975C19D00E820F1 /* HarryGQ.jpg */; };
+		63D79DA51975C19D00E820F1 /* LiamGQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D981975C19D00E820F1 /* LiamGQ.jpg */; };
+		63D79DA61975C19D00E820F1 /* LouisGQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D991975C19D00E820F1 /* LouisGQ.jpg */; };
+		63D79DA71975C19D00E820F1 /* NiallGQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D9A1975C19D00E820F1 /* NiallGQ.jpg */; };
+		63D79DA81975C19D00E820F1 /* Team.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D9B1975C19D00E820F1 /* Team.jpg */; };
+		63D79DA91975C19D00E820F1 /* ZaynGQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63D79D9C1975C19D00E820F1 /* ZaynGQ.jpg */; };
 		63D8ADC21963D10F00FD3F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8ADC11963D10F00FD3F47 /* AppDelegate.swift */; };
 		63D8ADC41963D10F00FD3F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D8ADC31963D10F00FD3F47 /* ViewController.swift */; };
 		63D8ADC71963D10F00FD3F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D8ADC51963D10F00FD3F47 /* Main.storyboard */; };
@@ -25,6 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63D79D901975C19D00E820F1 /* Die-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-1.png"; path = "../../../../../Desktop/rsc/Die-1.png"; sourceTree = "<group>"; };
+		63D79D911975C19D00E820F1 /* Die-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-2.png"; path = "../../../../../Desktop/rsc/Die-2.png"; sourceTree = "<group>"; };
+		63D79D921975C19D00E820F1 /* Die-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-3.png"; path = "../../../../../Desktop/rsc/Die-3.png"; sourceTree = "<group>"; };
+		63D79D931975C19D00E820F1 /* Die-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-4.png"; path = "../../../../../Desktop/rsc/Die-4.png"; sourceTree = "<group>"; };
+		63D79D941975C19D00E820F1 /* Die-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-5.png"; path = "../../../../../Desktop/rsc/Die-5.png"; sourceTree = "<group>"; };
+		63D79D951975C19D00E820F1 /* Die-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Die-6.png"; path = "../../../../../Desktop/rsc/Die-6.png"; sourceTree = "<group>"; };
+		63D79D961975C19D00E820F1 /* Goofy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Goofy.png; path = ../../../../../Desktop/rsc/Goofy.png; sourceTree = "<group>"; };
+		63D79D971975C19D00E820F1 /* HarryGQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = HarryGQ.jpg; path = ../../../../../Desktop/rsc/HarryGQ.jpg; sourceTree = "<group>"; };
+		63D79D981975C19D00E820F1 /* LiamGQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LiamGQ.jpg; path = ../../../../../Desktop/rsc/LiamGQ.jpg; sourceTree = "<group>"; };
+		63D79D991975C19D00E820F1 /* LouisGQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LouisGQ.jpg; path = ../../../../../Desktop/rsc/LouisGQ.jpg; sourceTree = "<group>"; };
+		63D79D9A1975C19D00E820F1 /* NiallGQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = NiallGQ.jpg; path = ../../../../../Desktop/rsc/NiallGQ.jpg; sourceTree = "<group>"; };
+		63D79D9B1975C19D00E820F1 /* Team.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Team.jpg; path = ../../../../../Desktop/rsc/Team.jpg; sourceTree = "<group>"; };
+		63D79D9C1975C19D00E820F1 /* ZaynGQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ZaynGQ.jpg; path = ../../../../../Desktop/rsc/ZaynGQ.jpg; sourceTree = "<group>"; };
 		63D8ADBC1963D10F00FD3F47 /* Yahweezee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yahweezee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D8ADC01963D10F00FD3F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63D8ADC11963D10F00FD3F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +113,19 @@
 		63D8ADBF1963D10F00FD3F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63D79D901975C19D00E820F1 /* Die-1.png */,
+				63D79D911975C19D00E820F1 /* Die-2.png */,
+				63D79D921975C19D00E820F1 /* Die-3.png */,
+				63D79D931975C19D00E820F1 /* Die-4.png */,
+				63D79D941975C19D00E820F1 /* Die-5.png */,
+				63D79D951975C19D00E820F1 /* Die-6.png */,
+				63D79D961975C19D00E820F1 /* Goofy.png */,
+				63D79D971975C19D00E820F1 /* HarryGQ.jpg */,
+				63D79D981975C19D00E820F1 /* LiamGQ.jpg */,
+				63D79D991975C19D00E820F1 /* LouisGQ.jpg */,
+				63D79D9A1975C19D00E820F1 /* NiallGQ.jpg */,
+				63D79D9B1975C19D00E820F1 /* Team.jpg */,
+				63D79D9C1975C19D00E820F1 /* ZaynGQ.jpg */,
 				63D8ADC01963D10F00FD3F47 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -190,7 +229,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D8ADC71963D10F00FD3F47 /* Main.storyboard in Resources */,
+				63D79DA31975C19D00E820F1 /* Goofy.png in Resources */,
+				63D79DA21975C19D00E820F1 /* Die-6.png in Resources */,
+				63D79D9E1975C19D00E820F1 /* Die-2.png in Resources */,
+				63D79DA11975C19D00E820F1 /* Die-5.png in Resources */,
+				63D79D9F1975C19D00E820F1 /* Die-3.png in Resources */,
 				63D8ADC91963D10F00FD3F47 /* Images.xcassets in Resources */,
+				63D79DA71975C19D00E820F1 /* NiallGQ.jpg in Resources */,
+				63D79DA51975C19D00E820F1 /* LiamGQ.jpg in Resources */,
+				63D79D9D1975C19D00E820F1 /* Die-1.png in Resources */,
+				63D79DA91975C19D00E820F1 /* ZaynGQ.jpg in Resources */,
+				63D79DA81975C19D00E820F1 /* Team.jpg in Resources */,
+				63D79DA41975C19D00E820F1 /* HarryGQ.jpg in Resources */,
+				63D79DA61975C19D00E820F1 /* LouisGQ.jpg in Resources */,
+				63D79DA01975C19D00E820F1 /* Die-4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +451,7 @@
 				63D8ADDA1963D10F00FD3F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63D8ADDB1963D10F00FD3F47 /* Build configuration list for PBXNativeTarget "YahweezeeTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +460,7 @@
 				63D8ADDD1963D10F00FD3F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

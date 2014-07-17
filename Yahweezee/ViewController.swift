@@ -9,10 +9,10 @@
 import UIKit
 
 func randomInt(#max:UInt32) ->Int {
-    return Int(arc4random_uniform(max+1)) + 1
+    return Int(arc4random_uniform(max+1))
 }
 
-func randomIntRange(#min: UInt32, #max: UInt32) -> Int {
+func randomInt(#min: UInt32, #max: UInt32) -> Int {
     //TODO add code to test for larger/smaller
     return Int((arc4random_uniform((max+1) - min)) + min)
 }
@@ -22,17 +22,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-   
-
-        rollSet = [6,6,6]
+        
+        dieImg = [Die1,Die2,Die3,Die4,Die5]
+        rollSet = [5,4,3,2,1]
         diceSet = 0
+        
         loadDiceSet(diceSet)
         paintTheDice(rollSet)
         
-
         lblResults.text = "Let's Roll!"
-        
         
     }
 
@@ -45,10 +43,10 @@ class ViewController: UIViewController {
     @IBOutlet var Die1: UIImageView
     @IBOutlet var Die2: UIImageView
     @IBOutlet var Die3: UIImageView
+    @IBOutlet var Die4: UIImageView
+    @IBOutlet var Die5: UIImageView
 
     @IBOutlet var lblResults: UILabel
-    
-    
     @IBOutlet var btnRoll_x: UIView  // refers to same label below - works but bad idea??
 
     @IBAction func btnRoll(sender: AnyObject) {
@@ -59,15 +57,18 @@ class ViewController: UIViewController {
         swapDice()
     }
     
-    
+    var allDice:Int = 5   //how many dice in a single roll
+                                // this will need to match with dieImg in viewDidLoad()
     var timer : NSTimer? = nil
+
     var rolls : Int = 0
-    var PipsImg:UIImage[] = []
+    var diceSet : Int = 0       //which dice - regular or faces?
     
-    var diceSet : Int = 0
+    var PipsImg:[UIImage] = []  //the images for the dice set
     
-    var rollSet : Int[] = []
+    var rollSet : [Int] = []    //Array with the values of the current rolls
     
+    var dieImg:[UIImageView] = []   //Array of the displayed rolls
     
     
     func doFancyDiceRoll() {
@@ -82,10 +83,11 @@ class ViewController: UIViewController {
         //timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "preRollAnimation", userInfo: nil, repeats: true);
         // preRollAnimation()
         
-        rollSet.append(randomIntRange(min:0, max:6))
-        rollSet.append(randomIntRange(min:0, max:6))
-        rollSet.append(randomIntRange(min:0, max:6))
+        for i in 0 ..< allDice {
+            rollSet.append(randomInt(min:1, max:6))
+        }
 
+        
         println("Rollset is: \(rollSet)")
         
         paintTheDice(rollSet)
@@ -93,23 +95,25 @@ class ViewController: UIViewController {
         //hiding is bad UI, but until i know how to "disable & dim"
         btnRoll_x.hidden = false
         
-        lblResults.text = "Sorry, try again....."
-        
-        lblResults.text = "\(rollSet[0]) and \(rollSet[1]) and \(rollSet[2])"
 
         
-        if ( (rollSet[0] == rollSet[1] ) && (rollSet[1] == rollSet[2] ) ) {
-                    lblResults.text = "Jackpot!!!!"
-        }
+        lblResults.text = "\(rollSet[0]) and \(rollSet[1]) and \(rollSet[2]) and \(rollSet[3]) and \(rollSet[4])"
+
+        
+        lblResults.text = evalHand(rollSet)
+        
+//        if ( (rollSet[0] == rollSet[1] ) && (rollSet[1] == rollSet[2] ) ) {
+//                    lblResults.text = "Jackpot!!!!"
+//        }
         
     }
 
 
     
     func preRollAnimation(){
-        Die1.image = PipsImg[randomIntRange(min:0, max:6)]
-        Die2.image = PipsImg[randomIntRange(min:0, max:6)]
-        Die3.image = PipsImg[randomIntRange(min:0, max:6)]
+        Die1.image = PipsImg[randomInt(min: 1, max:6)]
+        Die2.image = PipsImg[randomInt(min: 1,max: 6)]
+        Die3.image = PipsImg[randomInt(min: 1,max: 6)]
     
         if (++rolls > 15 ) {
             timer?.invalidate()
@@ -119,12 +123,12 @@ class ViewController: UIViewController {
     }
     
     
-    func paintTheDice(diceSet:Int[]){
+    func paintTheDice(diceSet:[Int]){
         
         println("paintthedice \(diceSet)")
-        Die1.image = PipsImg[diceSet[0]]
-        Die2.image = PipsImg[diceSet[1]]
-        Die3.image = PipsImg[diceSet[2]]
+        for i in 0 ..< allDice {
+            dieImg[i].image = PipsImg[diceSet[i]]
+        }
         
     }
     
@@ -151,6 +155,51 @@ class ViewController: UIViewController {
         }
 
     }
+    
+    
+    func evalHand(z:[Int]) -> String {
+        
+        
+            var die:[Int]
+        
+            die = z
+        
+            die.sort { $0 < $1 }
+        
+        println("sorted is \(die)")
+            
+        if      (die[0] == die[4]){
+            return "5 of a kind!!!"}
+        
+        else if (die[0] == die [3] ||
+                 die[1] == die [4]){
+            return "4 of a kind!!!"}
+        
+        else if ((die[0] == die [2]) && (die[3] == die [4])) ||
+                ((die[0] == die [1]) && (die[2] == die [4])) {
+            return "Full house!!"}
+        
+        else if (die[0] == die [2]) ||
+                (die[1] == die [3]) ||
+                (die[2] == die [4]) {
+            return "3 of a kind!!!"}
+    
+        else if ((die[0] == die [1]) && (die[2] == die [3])) ||
+                ((die[0] == die [1]) && (die[3] == die [4])) ||
+                ((die[1] == die [2]) && (die[3] == die [4])) {
+            return "Two Pair!!"}
+        
+        else if (die[0] == die [1]) ||
+                (die[1] == die [2]) ||
+                (die[2] == die [3]) ||
+                (die[3] == die [4]) {
+                return "Pair!"}
+        else {
+                return "Zilcho!"}
+        }
+    
+    
+    
 
     
     func swapDice(){
