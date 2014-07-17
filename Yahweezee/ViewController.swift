@@ -94,26 +94,17 @@ class ViewController: UIViewController {
         
         //hiding is bad UI, but until i know how to "disable & dim"
         btnRoll_x.hidden = false
-        
-
-        
-        lblResults.text = "\(rollSet[0]) and \(rollSet[1]) and \(rollSet[2]) and \(rollSet[3]) and \(rollSet[4])"
-
-        
+  
         lblResults.text = evalHand(rollSet)
-        
-//        if ( (rollSet[0] == rollSet[1] ) && (rollSet[1] == rollSet[2] ) ) {
-//                    lblResults.text = "Jackpot!!!!"
-//        }
         
     }
 
-
     
     func preRollAnimation(){
-        Die1.image = PipsImg[randomInt(min: 1, max:6)]
-        Die2.image = PipsImg[randomInt(min: 1,max: 6)]
-        Die3.image = PipsImg[randomInt(min: 1,max: 6)]
+        for i in 0 ..< allDice {
+            dieImg[i].image = PipsImg[randomInt(min: 0, max: 6)]
+            
+        }
     
         if (++rolls > 15 ) {
             timer?.invalidate()
